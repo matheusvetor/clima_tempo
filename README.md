@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/matheusvetor/clima_tempo.svg?branch=master)](https://travis-ci.org/matheusvetor/clima_tempo)
+
 # ClimaTempo
 
 Get brazilian weather values of the ClimaTempo.
@@ -26,6 +28,7 @@ clima_tempo.today_forecast
 ## Maintainer
 
 * Rogério Zambon (http://rogerio.me)
+* Matheus Oliveira (https://github.com/matheusvetor)
 
 ## License
 
