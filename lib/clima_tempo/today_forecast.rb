@@ -19,11 +19,11 @@ class TodayForecast
   end
 
   def minimum
-    @request.css(".left.left10.top5.bold.font27.txt-black").last.text
+    @request.css(".left.left10.top5.bold.font27.txt-black").last.text.match(/\d+/).to_s
   end
 
   def maximum
-    @request.css(".left.left10.top5.bold.font27.txt-black").first.text
+    @request.css(".left.left10.top5.bold.font27.txt-black").first.text.match(/\d+/).to_s
   end
 
   def probability_of_precipitation

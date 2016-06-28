@@ -17,11 +17,11 @@ class Now
 
   private
   def temperature
-    prepared_data.at_css("#momento-temperatura").text
+    prepared_data.at_css("#momento-temperatura").text.match(/\d+/).to_s
   end
 
   def thermal_sensation
-    prepared_data.at_css("#momento-sensacao").text
+    prepared_data.at_css("#momento-sensacao").text.match(/\d+/).to_s
   end
 
   # def wind
