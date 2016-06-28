@@ -1,4 +1,4 @@
-require "net/http"
+require 'open-uri'
 require "nokogiri"
 require "clima_tempo/request"
 require "clima_tempo/wind"
