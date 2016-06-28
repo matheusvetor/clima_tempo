@@ -15,8 +15,8 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_dependency "rake"
-  s.add_dependency "nokogiri", ">= 1.6.3"
+  s.add_dependency "nokogiri", ">= 1.6.8"
 
   s.add_development_dependency "fakeweb", ">= 1.3"
-  s.add_development_dependency "rspec", ">= 3.1.0"
+  s.add_development_dependency "rspec", ">= 3.4.0"
 end
