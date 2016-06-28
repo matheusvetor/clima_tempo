@@ -5,9 +5,9 @@ Gem::Specification.new do |s|
   s.name        = "clima_tempo"
   s.version     = ClimaTempo::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Rogério Zambon"]
-  s.email       = ["rogeriozambon@gmail.com"]
-  s.homepage    = "http://github.com/rogeriozambon/clima_tempo"
+  s.authors     = ["Matheus Oliveira", "Rogério Zambon"]
+  s.email       = ["matheus.vetor@gmail.com"]
+  s.homepage    = "http://github.com/matheusvetor/clima_tempo"
   s.summary     = "Get brazilian weather values of the ClimaTempo."
   s.description = s.summary
 
