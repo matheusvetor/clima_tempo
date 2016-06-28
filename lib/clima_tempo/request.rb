@@ -13,14 +13,10 @@ class Request
 
   private
   def request
-    @request ||= to_html(Net::HTTP.get(URI.parse(url)))
-  end
-
-  def to_html(request)
-    Nokogiri::HTML(request)
+    @request ||= Nokogiri::HTML(open(url))
   end
 
   def url
-    "http://www.climatempo.com.br/previsao-do-tempo/cidade/#{@code}/empty"
+    "http://www.climatempo.com.br/previsao-do-tempo/cidade/#{@code}"
   end
 end

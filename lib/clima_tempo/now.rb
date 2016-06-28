@@ -6,7 +6,8 @@ class Now
   def data
     {
       temperature: temperature,
-      wind: wind,
+      thermal_sensation: thermal_sensation,
+      # wind: wind,
       condition: condition,
       pressure: pressure,
       intensity: intensity,
@@ -16,30 +17,34 @@ class Now
 
   private
   def temperature
-    @request.xpath("//span[@class='left left10 top10 temp-momento']").text
+    prepared_data.at_css("#momento-temperatura").text
   end
 
-  def wind
-    Wind.new(prepared_data[0].text)
+  def thermal_sensation
+    prepared_data.at_css("#momento-sensacao").text
   end
+
+  # def wind
+  #   Wind.new(prepared_data[0].text)
+  # end
 
   def condition
-    prepared_data[1].text.gsub!(/^.+:\s*/, "")
+    prepared_data.at_css("#momento-condicao").text.strip
   end
 
   def pressure
-    prepared_data[2].text.gsub!(/^.+:\s*/, "")
+    prepared_data.at_css("#momento-pressao").text.strip
   end
 
   def intensity
-    prepared_data[3].text.gsub!(/^.+:\s*/, "")
+    prepared_data.at_css("#momento-vento").text.strip.delete!("\n").squeeze(" ")
   end
 
   def moisture
-    prepared_data[4].text.gsub!(/^.+:\s*/, "")
+    prepared_data.at_css("#momento-humidade").text.strip
   end
 
   def prepared_data
-    @prepared_data ||= @request.xpath("//li[@class='dados-momento-li list-style-none']")
+    @prepared_data ||= @request.css(".bg-box-prev-topo")
   end
 end
