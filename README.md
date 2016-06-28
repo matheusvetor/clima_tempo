@@ -19,16 +19,19 @@ require "clima_tempo"
 clima_tempo = ClimaTempo.new(558)
 
 clima_tempo.now
-#=> { :temperature => "22ºC", :wind => "Su-sudeste", :condition => "Muitas nuvens", :pressure => "1015 hPa", :intensity => "11 km/h", :moisture => "73%" }
+#=> { :temperature => "22", :condition => "Muitas nuvens", :pressure => "1015 hPa", :intensity => "11 km/h", :moisture => "73%" }
 
 clima_tempo.today_forecast
-#=> { :condition => "Sol com muitas nuvens. Pancadas de chuva à tarde e à noite.", :min => "17º", :max => "27º", :probability_of_precipitation => "64%" }
+#=> { :condition => "Sol com muitas nuvens. Pancadas de chuva à tarde e à noite.", :min => "17", :max => "27", :probability_of_precipitation => "64%", :volume_of_precipitation => "2mm" }
 ~~~
 
 ## Maintainer
 
-* Rogério Zambon (http://rogerio.me)
 * Matheus Oliveira (https://github.com/matheusvetor)
+
+## Creator
+
+* Rogério Zambon (http://rogerio.me)
 
 ## License
 
